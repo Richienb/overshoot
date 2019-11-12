@@ -1,8 +1,8 @@
 {
-    "name": "the-module",
+    "name": "overshoot",
     "version": "0.0.0",
-    "description": "My awesome module.",
-    "repository": "https://github.com/Richienb/the-module.git",
+    "description": "Get the Earth Overshoot day.",
+    "repository": "https://github.com/Richienb/overshoot.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "main": "index.js",
@@ -11,23 +11,39 @@
         "index.d.ts"
     ],
     "engines": {
-        "node": ">=8"
+        "node": ">=8.3"
     },
     "scripts": {
         "lint": "xo",
         "test": "yarn lint && ava"
     },
-    "keywords": [],
-    "dependencies": {},
+    "keywords": [
+        "earth",
+        "overshoot",
+        "day",
+        "date"
+    ],
+    "dependencies": {
+        "bluebird": "^3.7.1",
+        "cheerio": "^1.0.0-rc.3",
+        "dayjs": "^1.8.17",
+        "got": "^9.6.0",
+        "lodash": "^4.17.15",
+        "to-bluebird": "^1.0.2"
+    },
     "devDependencies": {
         "ava": "^2.1.0",
-        "eslint-config-richienb": "^0.2.2",
+        "eslint-config-richienb": "^0.2.3",
+        "is-date-object": "^1.0.1",
         "xo": "^0.25.3"
     },
     "resolutions": {
         "eslint": "^6.6.0"
     },
     "xo": {
-        "extends": "richienb/node"
+        "extends": "richienb/node",
+        "rules": {
+            "promise/prefer-await-to-then": 0
+        }
     }
 }

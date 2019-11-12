@@ -1,14 +1,15 @@
+import Promise from "bluebird"
+
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * Get the Earth Overshoot day.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const overShoot = require("overshoot");
+ *
+ * overShoot().then(console.log);
+ * //=> '2019-07-28T12:00:00.000Z'
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare function overShoot(): Promise<Date>;
 
-export = theModule;
+export = overShoot;

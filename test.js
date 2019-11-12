@@ -1,13 +1,7 @@
 import test from "ava"
-import theModule from "."
+import isDateObject from "is-date-object"
+import overShoot from "."
 
-test("main", (t) => {
-    t.throws(() => {
-        theModule(123)
-    }, {
-        instanceOf: TypeError,
-        message: "Expected a string, got number",
-    })
-
-    t.is(theModule("unicorns"), "unicorns & rainbows")
+test("main", async (t) => {
+    t.true(isDateObject(await overShoot()))
 })

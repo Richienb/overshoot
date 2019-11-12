@@ -1,41 +1,28 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Overshoot [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/overshoot/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/overshoot)
 
-My awesome module.
+Get the Earth Overshoot day.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/overshoot.png)](https://npmjs.com/package/overshoot)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install overshoot
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const overShoot = require("overshoot");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+overShoot().then(console.log);
+//=> '2019-07-28T12:00:00.000Z'
 ```
 
 ## API
 
-### theModule(input, options?)
+### overShoot()
 
-#### input
+Returns: `Promise<Date>`
 
-Type: `string`
-
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+Get the Earth Overshoot day.
